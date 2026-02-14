@@ -61,7 +61,7 @@ class User(Base):
     name = Column(String, nullable=False)
     email = Column(String, nullable=False)
     password = Column(String, nullable=False)
-    group_id = Column(Integer, ForeignKey("classroom.id"))
+    group_id = Column(Integer, ForeignKey("classroom.id"), nullable=True)
     status = Column(String, default="student")
     reg_date = Column(DateTime, default=datetime.now())
 

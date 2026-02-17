@@ -69,7 +69,7 @@ def create_upload_hw_db(text, uid, hid, points):
     return True
 
 
-def get_exact_task(hid):
+def get_exact_task_db(hid):
     db = next(get_db())
     exact_task = db.query(HomeWorkUpload).filter_by(hw_id=hid).first()
     if exact_task:
